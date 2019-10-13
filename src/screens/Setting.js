@@ -11,12 +11,13 @@ export default class Setting extends Component {
     this.state = {
       modalVisible: false,
       currentModal: 0
-    }
+    };
   }
 
-  setModalVisible(visible, changemodal) {
+  setModalVisible = (visible, changemodal) => {
     this.setState({ modalVisible: visible, currentModal: changemodal });
   }
+
   render() {
     const { modalVisible, currentModal } = this.state;
     return (
@@ -28,23 +29,20 @@ export default class Setting extends Component {
                 <SettingAlert onPress={() => { this.setModalVisible(!modalVisible) }} />}
           </ScrollView>
         </Modal>
-        <TouchableOpacity style={styles.touchblestyle}
-          onPress={() => this.setModalVisible(!modalVisible, 0)}>
-          <Text style={{ fontSize: 38 }}>세금 계산 상세 정보</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.touchblestyle}
-          onPress={() => this.setModalVisible(!modalVisible, 1)}>
-          <Text style={{ fontSize: 38 }}>사용방법</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.touchblestyle}
-          onPress={() => this.setModalVisible(!modalVisible, 2)}>
-          <Text style={{ fontSize: 38 }}>주의점</Text>
-        </TouchableOpacity>
+        {
+          ['세금 계산 상세 정보', '사용방법', '주의점'].map((ele, index) => (
+            <TouchableOpacity style={styles.touchblestyle}
+              onPress={() => this.setModalVisible(!modalVisible, index)}>
+              <Text style={{ fontSize: 38 }}>{ ele }</Text>
+            </TouchableOpacity>
+          ))
+        }
       </View>
 
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
@@ -65,7 +63,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    borderBottomColor:'#2C5364',
-    borderBottomWidth:1
+    borderBottomColor: '#2C5364',
+    borderBottomWidth: 1
   }
 });  

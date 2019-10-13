@@ -3,18 +3,30 @@ import { StyleSheet, Text, View, Picker, TextInput, Image, TouchableOpacity, Key
 import TaxChangeFlag from '../components/TaxChangeFlag'
 
 const Item = Picker.Item;
+const FLAG = {
+  'US' : require('../Image/flag/united-states.png'),
+  'AU' : require('../Image/flag/australia.png'),
+  'CA' : require('../Image/flag/canada.png'),
+  'CH' : require('../Image/flag/china.png'),
+  'EU' : require('../Image/flag/european-union.png'),
+  'HK' : require('../Image/flag/hong-kong.png'),
+  'JP' : require('../Image/flag/japan.png'),
+  'NZ' : require('../Image/flag/new-zealand.png'),
+  'KR' : require('../Image/flag/south-korea.png'),
+  'UK': require('../Image/flag/united-kingdom.png')
+};
 const BOUGHTGOODS = [
   { label: ' ', value: 'null' },
-  { label: "기타제품", value: '1_etc' },
-  { label: "패션ㆍ의류", value: '1_fashion' },
-  { label: "화장품ㆍ향수", value: '1_domestic' },
-  { label: "카메라ㆍ디지털", value: '1_digital' },
-  { label: "주류", value: '1_alchol' },
-  { label: "건강보조제", value: '1_vitamin' },
-  { label: "식품", value: '1_food' },
-  { label: "완구", value: '1_toy' },
-  { label: "운동용품", value: '1_gym' },
-  { label: "모피ㆍ융단", value: '1_fur' }
+  { label: "기타제품", value: 'ETC' },
+  { label: "패션ㆍ의류", value: 'FASHION' },
+  { label: "화장품ㆍ향수", value: 'DOMESTIC' },
+  { label: "카메라ㆍ디지털", value: 'DIGITAL' },
+  { label: "주류", value: 'ALCHOL' },
+  { label: "건강보조제", value: 'VITAMIN' },
+  { label: "식품", value: 'FOOD' },
+  { label: "완구", value: 'TOY' },
+  { label: "운동용품", value: 'GYM' },
+  { label: "모피ㆍ융단", value: 'FUR' }
 ];
 const ETC = [
   { label: '기타제품', value: '2_etc' }
@@ -64,14 +76,14 @@ const FUR = [
   { label: '고급모피', value: '2_overfur' },
   { label: '고급융단', value: '2_overcarpet' }
 ];
+
 export default class TaxCal extends Component {
   constructor(props) {
     super(props);
 
-
     this.state = {
       modalVisible: false,
-      stateGoods: 'null',
+      stateGoods: null,
       stateDetailGoods: 'null',
       currency: 'USD',
       purchaseamount: 0,
@@ -80,14 +92,16 @@ export default class TaxCal extends Component {
       calreporttax: 0,
       nowflag: 'US'
     };
-    this.handleChangeFlagAndCurrency = this.handleChangeFlagAndCurrency.bind(this);
   }
-  setModalVisible(visible) {
+
+  setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
   }
-  handleChangeFlagAndCurrency(f, c, visible) {
+
+  handleChangeFlagAndCurrency = (f, c, visible) => {
     this.setState({ nowflag: f, currency: c, modalVisible: visible });
   }
+
   render() {
     const { nowflag, modalVisible, calresult, caltax, currency, calreporttax, stateGoods, stateDetailGoods } = this.state;
     return (
@@ -104,21 +118,8 @@ export default class TaxCal extends Component {
           <View style={{ marginBottom: 20, borderBottomColor: '#ddd', borderBottomWidth: 2 }}>
             <TouchableOpacity style={{ alignItems: 'flex-end', marginBottom: 2 }}
               onPress={() => { this.setModalVisible(!modalVisible); }}>
-              <Image style={
-                {
-                  height: 24,
-                  width: 32,
-                }}
-                source={nowflag === 'US' ? require('../Image/flag/united-states.png') :
-                  nowflag === 'AU' ? require('../Image/flag/australia.png') :
-                    nowflag === 'CA' ? require('../Image/flag/canada.png') :
-                      nowflag === 'CH' ? require('../Image/flag/china.png') :
-                        nowflag === 'EU' ? require('../Image/flag/european-union.png') :
-                          nowflag === 'HK' ? require('../Image/flag/hong-kong.png') :
-                            nowflag === 'JP' ? require('../Image/flag/japan.png') :
-                              nowflag === 'NZ' ? require('../Image/flag/new-zealand.png') :
-                                nowflag === 'KR' ? require('../Image/flag/south-korea.png') :
-                                  require('../Image/flag/united-kingdom.png')} />
+              <Image style={{ width: 32, height: 24 }}
+                source={FLAG[nowflag]} />
             </TouchableOpacity>
           </View>
 
@@ -151,7 +152,6 @@ export default class TaxCal extends Component {
             }
           </View>
 
-
           {/* 피커 */}
           <View style={styles.viewstyle}>
             <Text style={styles.txtstyle}>구입물품</Text>
@@ -173,36 +173,9 @@ export default class TaxCal extends Component {
               selectedValue={stateDetailGoods}
               onValueChange={(itemValue, itemIndex) => this.setState({ stateDetailGoods: itemValue })}>
               {
-                stateGoods === '1_etc' ? ETC.map((ele) => {
+                stateGoods ? [stateGoods].map((ele) => {
                   return <Item key={ele} label={ele.label} value={ele.value} />
-                }) :
-                  stateGoods === '1_fashion' ? FASHION.map((ele) => {
-                    return <Item key={ele} label={ele.label} value={ele.value} />
-                  }) :
-                    stateGoods === '1_domestic' ? DOMESTIC.map((ele) => {
-                      return <Item key={ele} label={ele.label} value={ele.value} />
-                    }) :
-                      stateGoods === '1_digital' ? DIGITAL.map((ele) => {
-                        return <Item key={ele} label={ele.label} value={ele.value} />
-                      }) :
-                        stateGoods === '1_alchol' ? ALCHOL.map((ele) => {
-                          return <Item key={ele} label={ele.label} value={ele.value} />
-                        }) :
-                          stateGoods === '1_vitamin' ? VITAMIN.map((ele) => {
-                            return <Item key={ele} label={ele.label} value={ele.value} />
-                          }) :
-                            stateGoods === '1_food' ? FOOD.map((ele) => {
-                              return <Item key={ele} label={ele.label} value={ele.value} />
-                            }) :
-                              stateGoods === '1_toy' ? TOY.map((ele) => {
-                                return <Item key={ele} label={ele.label} value={ele.value} />
-                              }) :
-                                stateGoods === '1_gym' ? GYM.map((ele) => {
-                                  return <Item key={ele} label={ele.label} value={ele.value} />
-                                }) :
-                                  stateGoods === '1_fur' ? FUR.map((ele) => {
-                                    return <Item key={ele} label={ele.label} value={ele.value} />
-                                  }) : null
+                }) : null
               }
             </Picker>
           </View>

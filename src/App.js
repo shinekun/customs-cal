@@ -5,11 +5,12 @@ import Main from './screens/Main'
 import Loading from './screens/Loading'
 
 export default class App extends Component {
-  state = {
-    loaded: false
-  }
   constructor(props) {
     super();
+
+    this.state = {
+      loaded: false
+    };
 
     Mainservice.loadOptions(v => this.setState({ loaded: true }));
   }
@@ -17,8 +18,7 @@ export default class App extends Component {
     return (
       <View>
         {/* {this.state.loaded ? <Main/> : <Loading/>} */}
-         <Main/> 
-
+        <Main />
       </View>
     );
   }
