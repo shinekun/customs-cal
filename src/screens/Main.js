@@ -15,8 +15,8 @@ export default class Main extends Component {
 
     this.tabScreens = [
       { name: '면세계산기', screen: <TaxCal /> },
-      { name: '반입담배', screen: <Tobaco /> },
-      { name: '기타등등', screen: <Setting /> }
+      { name: '국가별안내', screen: <Tobaco /> },
+      { name: '기타 정보', screen: <Setting /> }
     ];
   }
   render() {

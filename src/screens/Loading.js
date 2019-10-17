@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     margin:30,
-    flexDirection:'column'
+    flexDirection:'column',
+    backgroundColor:'#ffffff'
   },
 });

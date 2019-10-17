@@ -16,8 +16,7 @@ export default class App extends Component {
   render() {
     return (
       <View>
-        {/* {this.state.loaded ? <Main/> : <Loading/>} */}
-         <Main/> 
+        {this.state.loaded ? <Main/> : <Loading/>}
 
       </View>
     );
