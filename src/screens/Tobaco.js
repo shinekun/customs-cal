@@ -101,7 +101,7 @@ export default class Tobaco extends Component {
             </TouchableOpacity>
           </ScrollView>
         </Modal>
-        
+
         <TobacoTachable source1={COUNTRY.JAPAN.flag} source2={COUNTRY.CHINA.flag} source3={COUNTRY.VIETNAM.flag}
           text1='일본' text2='중국' text3='베트남'
           onPress={() => { this.setModalVisible(true); this.setState({ nowflag: 'JAPAN' }) }}

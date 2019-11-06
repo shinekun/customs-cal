@@ -4,7 +4,6 @@ import TaxChangeFlag from '../components/TaxChangeFlag'
 
 const Item = Picker.Item;
 const FLAG = {
-<<<<<<< HEAD
   'US': require('../Image/flag/united-states.png'),
   'AU': require('../Image/flag/australia.png'),
   'CA': require('../Image/flag/canada.png'),
@@ -18,42 +17,23 @@ const FLAG = {
 };
 const BOUGHTGOODS = [
   { label: '', value: '' },
-=======
-  'US' : require('../Image/flag/united-states.png'),
-  'AU' : require('../Image/flag/australia.png'),
-  'CA' : require('../Image/flag/canada.png'),
-  'CH' : require('../Image/flag/china.png'),
-  'EU' : require('../Image/flag/european-union.png'),
-  'HK' : require('../Image/flag/hong-kong.png'),
-  'JP' : require('../Image/flag/japan.png'),
-  'NZ' : require('../Image/flag/new-zealand.png'),
-  'KR' : require('../Image/flag/south-korea.png'),
-  'UK': require('../Image/flag/united-kingdom.png')
-};
-const BOUGHTGOODS = [
-  { label: ' ', value: 'null' },
->>>>>>> 9be2ce710e9445166784efecf1c94a2d3de771e4
   { label: "기타제품", value: 'ETC' },
   { label: "패션ㆍ의류", value: 'FASHION' },
   { label: "화장품ㆍ향수", value: 'DOMESTIC' },
   { label: "카메라ㆍ디지털", value: 'DIGITAL' },
   { label: "주류", value: 'ALCHOL' },
-<<<<<<< HEAD
   { label: "담배", value: 'TOBACO' },
-=======
->>>>>>> 9be2ce710e9445166784efecf1c94a2d3de771e4
   { label: "건강보조제", value: 'VITAMIN' },
   { label: "식품", value: 'FOOD' },
   { label: "완구", value: 'TOY' },
   { label: "운동용품", value: 'GYM' },
   { label: "모피ㆍ융단", value: 'FUR' }
-<<<<<<< HEAD
 ];
 const BOUGHTDETAILGOODS = {
   "ETC": [
     { label: '기타제품', value: 'etc' },
   ],
-  'FASHION' : [
+  'FASHION': [
     { label: '신변용품', value: 'personalGoods' },
     { label: '일반시계', value: 'watch' },
     { label: '고급시계', value: 'overwatch' },
@@ -62,97 +42,43 @@ const BOUGHTDETAILGOODS = {
     { label: '의류 및 신발', value: 'dress' },
     { label: '귀금속 보석류', value: 'jewelry' }
   ],
-  'DOMESTIC' : [
+  'DOMESTIC': [
     { label: '화장품', value: 'domestic' },
     { label: '향수', value: 'perfum' }
   ],
-  'DIGITAL' : [
+  'DIGITAL': [
     { label: '일반카메라', value: 'camera' },
     { label: '디지털가메라', value: 'digitalcamera' },
     { label: '캠코더', value: 'camcoder' },
     { label: '노트북', value: 'laptop' }
   ],
-  'ALCHOL' : [
+  'ALCHOL': [
     { label: '위스키', value: 'wisky' },
     { label: '꼬냑', value: 'cognac' },
     { label: '포도주', value: 'wine' },
     { label: '맥주', value: 'beer' }
   ],
-  'TOBACO' : [
-    { label: '담배-1보루', value: 'tobaco' }
-  ],
-  'VITAMIN' : [
+  'VITAMIN': [
     { label: '로얄젤리', value: 'royaljelly' },
     { label: '건강보조제', value: 'healthsupport' },
     { label: '녹용', value: 'deerhorn' }
   ],
-  'FOOD' : [
+  'FOOD': [
     { label: '과자류', value: 'snack' }
   ],
-  'TOY' : [
+  'TOY': [
     { label: '완구류', value: 'toy' }
   ],
-  'GYM' : [
+  'GYM': [
     { label: '운동용품', value: 'gym' },
     { label: '골프용품', value: 'golf' },
   ],
-  'FUR' : [
+  'FUR': [
     { label: '모피제품', value: 'fur' },
     { label: '고급모피', value: 'overfur' },
     { label: '고급융단', value: 'overcarpet' }
   ],
 }
-=======
-];
-const ETC = [
-  { label: '기타제품', value: '2_etc' }
-];
-const FASHION = [
-  { label: '신변용품', value: '2_personalGoods' },
-  { label: '일반시계', value: '2_watch' },
-  { label: '고급시계', value: '2_overwatch' },
-  { label: '일반가방', value: '2_bag' },
-  { label: '고급가방', value: '2_overbag' },
-  { label: '의류', value: '2_dress' },
-  { label: '귀금속 보석류', value: 'jewelry' }
-];
-const DOMESTIC = [
-  { label: '화장품', value: '2_domestic' },
-  { label: '향수', value: '2_perfum' }
-];
-const DIGITAL = [
-  { label: '일반카메라', value: '2_camera' },
-  { label: '디지털가메라', value: '2_digitalcamera' },
-  { label: '캠코더', value: '2_camcoder' },
-  { label: '노트북', value: '2_laptop' }
-];
-const ALCHOL = [
-  { label: '위스키', value: '2_wisky' },
-  { label: '꼬냑', value: '2_cognac' },
-  { label: '포도주', value: '2_wine' },
-  { label: '맥주', value: '2_beer' }
-]
-const VITAMIN = [
-  { label: '로얄젤리', value: '2_royaljelly' },
-  { label: '건강보조제', value: '2_healthsupport' },
-  { label: '녹용', value: '2_deerhorn' }
-];
-const FOOD = [
-  { label: '과자류', value: '2_snack' }
-];
-const TOY = [
-  { label: '완구류', value: '2_toy' }
-];
-const GYM = [
-  { label: '운동용품', value: '2_gym' },
-  { label: '골프용품', value: '2-golf' },
-];
-const FUR = [
-  { label: '모피제품', value: '2_fur' },
-  { label: '고급모피', value: '2_overfur' },
-  { label: '고급융단', value: '2_overcarpet' }
-];
->>>>>>> 9be2ce710e9445166784efecf1c94a2d3de771e4
 
 export default class TaxCal extends Component {
   constructor(props) {
@@ -160,15 +86,9 @@ export default class TaxCal extends Component {
 
     this.state = {
       modalVisible: false,
-<<<<<<< HEAD
       stateGoods: '',
       stateDetailGoods: '',
       currency: 'KRW',
-=======
-      stateGoods: null,
-      stateDetailGoods: 'null',
-      currency: 'USD',
->>>>>>> 9be2ce710e9445166784efecf1c94a2d3de771e4
       purchaseamount: 0,
       calresult: true,
       caltax: 0,
@@ -185,7 +105,6 @@ export default class TaxCal extends Component {
     this.setState({ nowflag: f, currency: c, modalVisible: visible });
   }
 
-<<<<<<< HEAD
   _docalreportcalculate = () => {
     this.setState({ calresult: false })
     let _reporttax = this.state.caltax * 0.7
@@ -193,108 +112,105 @@ export default class TaxCal extends Component {
       this.setState({ calreporttax: 150000 })
     }
     else {
-      this.setState({ calreporttax: _reporttax, })
+      this.setState({ calreporttax: _reporttax })
     }
   }
 
   _docalculate = (purchaseamount) => {
-    let _caltax=0;
+    let _caltax = 0;
     if (this.state.stateDetailGoods == '')
       alert('물품을 선택해주세요.')
     else
       switch (this.state.stateDetailGoods) {
         case 'etc':
-          _caltax += purchaseamount * 0.2
+          _caltax = parseInt(purchaseamount) * 0.2;
           break;
         case 'personalGoods':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
-        case 'watch': _caltax += purchaseamount * 0.2
+        case 'watch': _caltax = purchaseamount * 0.2
           break;
         case 'overwatch':
           if (purchaseamount < 1852001) {
             alert('이 항목의 상품가격은 185만 2천원을 초과해야만 합니다.')
           }
           else
-            _caltax += (purchaseamount - 1852000) * 0.5 + 370400
+            _caltax = (parseInt(purchaseamount) - parseInt(1852000)) * 0.5 + parseInt(370400)
           break;
         case 'bag':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
         case 'overbag':
           if (purchaseamount < 1852001) {
             alert('이 항목의 상품가격은 185만 2천원을 초과해야만 합니다.')
           }
           else
-            _caltax += (purchaseamount - 1852000) * 0.5 + 370400
+            _caltax = (parseInt(purchaseamount) - parseInt(1852000)) * 0.5 + parseInt(370400)
           break;
         case 'dress':
-          _caltax += purchaseamount * 0.25
+          _caltax = purchaseamount * 0.25
           break;
         case 'jewelry':
           if (purchaseamount < 4630000) {
             alert('이 항목의 상품가격은 463만 원을 초과해야만 합니다.')
           }
           else
-            _caltax += (purchaseamount - 4630000) * 0.5 + 926000
+            _caltax = (parseInt(purchaseamount) - parseInt(4630000)) * 0.5 + parseInt(926000)
           break;
         case 'domestic':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
         case 'perfum':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
         case 'camera':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
         case 'digitalcamera':
-          _caltax += purchaseamount * 0.1
+          _caltax = purchaseamount * 0.1
           break;
         case 'camcoder':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
         case 'laptop':
-          _caltax += purchaseamount * 0.1
+          _caltax = purchaseamount * 0.1
           break;
         case 'wisky':
-          _caltax += purchaseamount * 1.55
+          _caltax = purchaseamount * 1.55
           break;
         case 'cognac':
-          _caltax += purchaseamount * 1.45
+          _caltax = purchaseamount * 1.45
           break;
         case 'wine':
-          _caltax += purchaseamount * 0.68
+          _caltax = purchaseamount * 0.68
           break;
         case 'beer':
-          _caltax += purchaseamount * 1.77
-          break;
-        case 'tobaco':
-          _caltax += (purchaseamount * 0.4) + 5940 + (purchaseamount + (purchaseamount * 0.4) + 5940) * 0.1 + 14490
+          _caltax = purchaseamount * 1.77
           break;
         case 'royaljelly':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
         case 'healthsupport':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
         case 'deerhorn':
-          _caltax += purchaseamount * 0.32
+          _caltax = purchaseamount * 0.32
           break;
         case 'snack':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
         case 'toy':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
         case 'gym':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
         case 'golf':
-          _caltax += purchaseamount * 0.2
+          _caltax = purchaseamount * 0.2
           break;
         case 'fur':
           if (purchaseamount <= 4310000) {
-            _caltax += purchaseamount * 0.3
+            _caltax = purchaseamount * 0.3
           }
           else
             alert('이 항목의 상품가격은 431만 원 미만이어야만 합니다.')
@@ -304,22 +220,20 @@ export default class TaxCal extends Component {
             alert('이 항목의 상품가격은 431만 원을 초과해야만 합니다.')
           }
           else
-            _caltax += purchaseamount * 0.4906
+            _caltax = purchaseamount * 0.4906
           break;
         case 'overcarpet':
           if (purchaseamount < 1818190) {
             alert('이 항목의 상품가격은 181만 8190원을 초과해야만 합니다.')
           }
           else
-            _caltax += purchaseamount * 0.21
+            _caltax = purchaseamount * 0.21
           break;
       }
-      this.setState({caltax:_caltax});
+    this.setState({ caltax: this.state.caltax + _caltax });
   }
 
 
-=======
->>>>>>> 9be2ce710e9445166784efecf1c94a2d3de771e4
   render() {
     const { nowflag, modalVisible, calresult, caltax, currency, calreporttax, stateGoods, stateDetailGoods } = this.state;
     return (
@@ -342,29 +256,28 @@ export default class TaxCal extends Component {
           </View>
 
           {/* 예상세액 */}
-          <View style={{
-            borderBottomWidth: 5,
-            borderBottomColor: "#eee",
-            justifyContent: 'center',
-            height: '20%'
-          }}>
+          <View style={styles.iftax}>
             {calresult === true ?
-              <TouchableOpacity style={{ flex: 1 }} onPress={() =>this._docalreportcalculate() }>
+              <TouchableOpacity style={{ flex: 1 }} onPress={() => this._docalreportcalculate()}>
                 <View style={{ flex: 0.5 }}>
                   <Text style={styles.txtstyle, { fontSize: 15 }}>예상세액</Text>
                 </View>
-                <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1.5, width: '100%' }}>
+                <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1.5, width: '100%', flexDirection: 'row' }}>
+                  <Text style={styles.caltxtstyle, { fontSize: 30 }}>
+                    {currency} </Text>
                   <Text style={styles.caltxtstyle, { fontSize: 40 }}>
-                    {`${this.state.currency} ${caltax}`} </Text>
+                    {caltax.toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </Text>
                 </View>
               </TouchableOpacity> :
               <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setState({ calresult: true })}>
                 <View style={{ flex: 0.5 }}>
                   <Text style={styles.txtstyle, { fontSize: 15 }}>자진신고세액</Text>
                 </View>
-                <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1.5, width: '100%' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', flex: 1.5, width: '100%' }}>
+                  <Text style={styles.caltxtstyle, { fontSize: 30 }}>
+                    {currency} </Text>
                   <Text style={styles.caltxtstyle, { fontSize: 40 }}>
-                    {`${this.state.currency} ${calreporttax}`} </Text>
+                    {calreporttax.toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </Text>
                 </View>
               </TouchableOpacity>
             }
@@ -391,18 +304,12 @@ export default class TaxCal extends Component {
               style={styles.pickerstyle}
               selectedValue={stateDetailGoods}
               onValueChange={(itemValue, itemIndex) => this.setState({ stateDetailGoods: itemValue })}>
-              
+
               {
-<<<<<<< HEAD
                 stateGoods === '' ? null :
-                  BOUGHTDETAILGOODS[stateGoods].map((ele,index) => {
+                  BOUGHTDETAILGOODS[stateGoods].map((ele, index) => {
                     return <Item key={index} label={ele.label} value={ele.value} />
                   })
-=======
-                stateGoods ? [stateGoods].map((ele) => {
-                  return <Item key={ele} label={ele.label} value={ele.value} />
-                }) : null
->>>>>>> 9be2ce710e9445166784efecf1c94a2d3de771e4
               }
             </Picker>
           </View>
@@ -413,7 +320,7 @@ export default class TaxCal extends Component {
             <Text style={styles.txtstyle}>총구입금액</Text>
             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
               <TextInput style={styles.txtInputStyle}
-                onChangeText={(purchaseamount) => this.setState({ purchaseamount: purchaseamount })}
+                onChangeText={(purchaseamountInput) => this.setState({ purchaseamount: purchaseamountInput })}
                 maxLength={12}
                 value={this.state.purchaseamount.toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                 keyboardType='numeric'
@@ -426,13 +333,12 @@ export default class TaxCal extends Component {
           {/* 버튼 */}
           <View style={styles.viewstyle}>
             <TouchableOpacity style={styles.buttonstyle}
-              onPress={() => this._docalculate(this.state.purchaseamount)}
-            >
-              <Image style={{height:60,width:60}} source={require('../Image/calculator.png')}/>
+              onPress={() => this._docalculate(this.state.purchaseamount.replace(/,/g, ""))}>
+              <Image style={{ height: 40, width: 40 }} source={require('../Image/calculator.png')} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonstyle}
-              onPress={() => this.setState({ caltax: 0, calreporttax: 0 })}>
-              <Image style={{height:60,width:60}} source={require('../Image/refresh.png')}/>
+              onPress={() => this.setState({ caltax: 0, purchaseamount: 0 })}>
+              <Image style={{ height: 40, width: 40 }} source={require('../Image/refresh.png')} />
             </TouchableOpacity>
           </View>
         </View>
@@ -445,6 +351,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fafafa',
     margin: 10
+  },
+  iftax: {
+    borderBottomWidth: 5,
+    borderBottomColor: "#eee",
+    justifyContent: 'center',
+    height: '20%'
   },
   viewstyle: {
     borderBottomWidth: 5,

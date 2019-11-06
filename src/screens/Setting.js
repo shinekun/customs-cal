@@ -11,13 +11,12 @@ export default class Setting extends Component {
     this.state = {
       modalVisible: false,
       currentModal: 0
-    };
+    }
   }
 
-  setModalVisible = (visible, changemodal) => {
+  setModalVisible(visible, changemodal) {
     this.setState({ modalVisible: visible, currentModal: changemodal });
   }
-
   render() {
     const { modalVisible, currentModal } = this.state;
     return (
@@ -31,15 +30,9 @@ export default class Setting extends Component {
         </Modal>
         {
           ['세금 계산 상세 정보', '사용방법', '주의점'].map((ele, index) => (
-<<<<<<< HEAD
             <TouchableOpacity style={styles.touchblestyle} key={index}
               onPress={() => this.setModalVisible(!modalVisible, index)}>
               <Text style={{ fontSize: 38 }}>{ele}</Text>
-=======
-            <TouchableOpacity style={styles.touchblestyle}
-              onPress={() => this.setModalVisible(!modalVisible, index)}>
-              <Text style={{ fontSize: 38 }}>{ ele }</Text>
->>>>>>> 9be2ce710e9445166784efecf1c94a2d3de771e4
             </TouchableOpacity>
           ))
         }
@@ -48,7 +41,6 @@ export default class Setting extends Component {
     );
   }
 }
-
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',

@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
     viewStyle: {
         flexDirection: 'row',
         backgroundColor: '#fafafa',
-        flex: 1
+        flex: 1,
+        margin:7
     },
     touchablestyle: {
         flex: 1,
