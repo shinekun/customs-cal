@@ -92,12 +92,11 @@ export default class Tobaco extends Component {
     const { nowflag, modalVisible } = this.state;
     return (
       <View style={styles.container}>
-        <Modal animationType="fade" transparent={false} visible={this.state.modalVisible}>
-          <ScrollView contentContainerStyle={{ alignItems: 'center' }} style={{ backgroundColor: '#ddd' }}>
+        <Modal animationType="fade" transparent={false} visible={this.state.modalVisible} style={{width:'90%'}}>
+          <ScrollView contentContainerStyle={{ alignItems: 'center' }} style={{ backgroundColor: '#ddd', marginHorizontal:7 }}>
             <TouchableOpacity onPress={() => { this.setModalVisible(!modalVisible); }}>
               <Image style={styles.modalImage}
-                source={COUNTRY[nowflag].detail}
-                resizeMode='cover'/>
+                source={COUNTRY[nowflag].detail}/>
             </TouchableOpacity>
           </ScrollView>
         </Modal>
@@ -136,12 +135,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
     backgroundColor: '#fafafa',
-    margin: 10,
-    padding: 10
+    margin: 5,
+    padding: 5,
   },
   modalImage: {
     alignItems: 'center',
-    flex: 1,
+    
   }
 
 });
